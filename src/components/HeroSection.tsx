@@ -74,7 +74,7 @@ const HeroSection = () => {
                         "A contabilidade não é apenas números: é estratégia para crescer."
                       </p>
                       <div className="mt-2 text-sm text-muted-foreground">
-                        Andersom Carvalho, CEO, ACS Contabilidade
+                        Anderson Carvalho, CEO, ACS Contabilidade
                       </div>
                     </div>
                   </div>
