@@ -33,7 +33,7 @@ const DifferentialsSection = () => {
     {
       icon: Award,
       title: "Experiência de +20 anos",
-      description: "Duas décadas de expertise em contabilidade e gestão empresarial, com conhecimento profundo do mercado brasileiro.",
+      description: "Nosso CEO e equipe tem mais de duas décadas de expertise em contabilidade e gestão empresarial, com conhecimento profundo do mercado brasileiro.",
       color: "text-primary",
       bgColor: "bg-primary/10"
     },
@@ -110,7 +110,7 @@ const DifferentialsSection = () => {
 
         {/* Featured Stats */}
         <div className="bg-white rounded-3xl shadow-elegant p-8 md:p-12">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="group">
               <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
                 20+
@@ -119,13 +119,6 @@ const DifferentialsSection = () => {
               <div className="text-sm text-muted-foreground">de experiência no mercado</div>
             </div>
             
-            <div className="group">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                500+
-              </div>
-              <div className="text-gold font-semibold text-lg mb-1">Empresas</div>
-              <div className="text-sm text-muted-foreground">atendidas com sucesso</div>
-            </div>
             
             <div className="group">
               <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">

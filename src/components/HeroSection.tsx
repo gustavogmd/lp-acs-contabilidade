@@ -34,21 +34,13 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button variant="glass" size="xl" className="group">
-                <Play className="mr-2 h-5 w-5" />
-                Ver apresentação
-              </Button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
+            <div className="grid grid-cols-2 gap-6 pt-8 border-t border-border">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">20+</div>
                 <div className="text-sm text-muted-foreground">Anos de experiência</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gold">500+</div>
-                <div className="text-sm text-muted-foreground">Empresas atendidas</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">98%</div>
@@ -67,12 +59,12 @@ const HeroSection = () => {
               <div className="relative">
                 <img
                   src={ceoPortrait}
-                  alt="CEO da ACS Contabilidade"
+                  alt="Andersom Carvalho, CEO da ACS Contabilidade"
                   className="w-full max-w-lg mx-auto rounded-3xl shadow-elegant scale-on-hover"
                 />
                 
                 {/* Quote Overlay */}
-                <div className="absolute -bottom-8 -left-4 md:-left-8 bg-white p-6 rounded-2xl shadow-gold max-w-sm">
+                <div className="absolute -bottom-8 -left-4 md:-left-8 lg:-bottom-12 lg:-left-8 bg-white p-6 rounded-2xl shadow-gold max-w-sm animate-float">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 gradient-gold rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-primary font-bold text-xl">"</span>
@@ -82,7 +74,7 @@ const HeroSection = () => {
                         "A contabilidade não é apenas números: é estratégia para crescer."
                       </p>
                       <div className="mt-2 text-sm text-muted-foreground">
-                        CEO, ACS Contabilidade
+                        Andersom Carvalho, CEO, ACS Contabilidade
                       </div>
                     </div>
                   </div>
@@ -93,12 +85,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="animate-bounce-gentle">
-          <div className="w-1 h-16 bg-gradient-to-b from-primary to-gold rounded-full"></div>
-        </div>
-      </div>
     </section>
   );
 };

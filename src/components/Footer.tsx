@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Linkedin, Facebook, Youtube } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -136,6 +136,12 @@ const Footer = () => {
                 className="w-10 h-10 bg-primary-light/20 rounded-full flex items-center justify-center hover:bg-gold transition-colors group"
               >
                 <Facebook className="w-5 h-5 text-primary-foreground/80 group-hover:text-primary" />
+              </a>
+              <a 
+                href="#" 
+                className="w-10 h-10 bg-primary-light/20 rounded-full flex items-center justify-center hover:bg-gold transition-colors group"
+              >
+                <Youtube className="w-5 h-5 text-primary-foreground/80 group-hover:text-primary" />
               </a>
             </div>
 

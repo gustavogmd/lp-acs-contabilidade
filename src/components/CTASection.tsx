@@ -28,9 +28,6 @@ const CTASection = () => {
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button variant="glass" size="lg" className="text-white border-white/30 hover:bg-white/10 text-lg px-8 py-4">
-                Baixar Material Gratuito
-              </Button>
             </div>
 
             {/* Contact Options */}
@@ -90,7 +87,7 @@ const CTASection = () => {
             <div className="inline-flex items-center space-x-2 bg-gold/20 backdrop-blur-sm px-6 py-3 rounded-full">
               <div className="w-3 h-3 bg-gold rounded-full animate-pulse"></div>
               <span className="text-gold font-semibold">
-                Vagas limitadas para novos clientes em 2024
+                Vagas limitadas para novos clientes
               </span>
             </div>
           </div>
