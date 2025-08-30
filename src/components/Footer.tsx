@@ -27,15 +27,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-gold" />
-                <span className="text-primary-foreground/90">(11) 9999-9999</span>
+                <span className="text-primary-foreground/90">(21) 98142-1713</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-gold" />
-                <span className="text-primary-foreground/90">contato@acscontabilidade.com</span>
+                <span className="text-primary-foreground/90">contato@acscontabilidade.com.br</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-gold" />
-                <span className="text-primary-foreground/90">São Paulo, SP - Brasil</span>
+                <span className="text-primary-foreground/90">Niterói, RJ, Brasil</span>
               </div>
             </div>
           </div>
@@ -116,7 +116,9 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex items-center space-x-4">
               <a 
-                href="#" 
+                href="https://www.instagram.com/acs_contabilidade_e_gestao" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-light/20 rounded-full flex items-center justify-center hover:bg-gold transition-colors group"
               >
                 <Instagram className="w-5 h-5 text-primary-foreground/80 group-hover:text-primary" />
@@ -128,7 +130,9 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5 text-primary-foreground/80 group-hover:text-primary" />
               </a>
               <a 
-                href="#" 
+                href="https://www.facebook.com/andersoncconsultor" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-light/20 rounded-full flex items-center justify-center hover:bg-gold transition-colors group"
               >
                 <Facebook className="w-5 h-5 text-primary-foreground/80 group-hover:text-primary" />

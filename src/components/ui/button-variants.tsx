@@ -15,7 +15,8 @@ const buttonVariants = cva(
         hero: "gradient-hero text-white shadow-elegant hover:shadow-gold hover:scale-105 font-semibold transition-all duration-300",
         gold: "gradient-gold text-primary shadow-gold hover:bg-gold-dark hover:scale-105 font-semibold",
         glass: "glass text-primary border-primary/20 hover:bg-primary/10 backdrop-blur-lg",
-        cta: "bg-gold text-primary hover:bg-gold-dark shadow-gold hover:shadow-elegant hover:scale-105 font-bold text-lg px-8 py-4"
+        cta: "bg-gold text-primary hover:bg-gold-dark shadow-gold hover:shadow-elegant hover:scale-105 font-bold text-lg px-8 py-4",
+        yellow: "bg-gold text-primary hover:bg-gold-dark shadow-gold hover:shadow-elegant hover:scale-105 font-semibold"
       },
       size: {
         default: "h-10 px-4 py-2",

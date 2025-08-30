@@ -23,7 +23,12 @@ const CTASection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button variant="gold" size="lg" className="group text-lg px-8 py-4">
+              <Button 
+                variant="gold" 
+                size="lg" 
+                className="group text-lg px-8 py-4"
+                onClick={() => window.open('https://wa.me/5521981421713?text=Ol%C3%A1%2C%20te%20encontrei%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20de%20contabilidade.', '_blank')}
+              >
                 Fale com um Especialista
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -32,22 +37,31 @@ const CTASection = () => {
 
             {/* Contact Options */}
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 group hover:bg-white/20 transition-all duration-300">
+              <div 
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 group hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                onClick={() => window.open('tel:+5521981421713', '_blank')}
+              >
                 <Phone className="w-8 h-8 text-gold mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <div className="font-semibold mb-1">Ligue Agora</div>
-                <div className="text-sm opacity-90">(11) 9999-9999</div>
+                <div className="text-sm opacity-90">(21) 98142-1713</div>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 group hover:bg-white/20 transition-all duration-300">
+              <div 
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 group hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                onClick={() => window.open('https://wa.me/5521981421713?text=Ol%C3%A1%2C%20te%20encontrei%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os%20de%20contabilidade.', '_blank')}
+              >
                 <MessageCircle className="w-8 h-8 text-gold mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <div className="font-semibold mb-1">WhatsApp</div>
                 <div className="text-sm opacity-90">Resposta imediata</div>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 group hover:bg-white/20 transition-all duration-300">
+              <div 
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 group hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                onClick={() => window.open('mailto:contato@acscontabilidade.com.br', '_blank')}
+              >
                 <Mail className="w-8 h-8 text-gold mx-auto mb-3 group-hover:scale-110 transition-transform" />
                 <div className="font-semibold mb-1">E-mail</div>
-                <div className="text-sm opacity-90">contato@acscontabilidade.com</div>
+                <div className="text-sm opacity-90">contato@acscontabilidade.com.br</div>
               </div>
             </div>
           </div>
