@@ -10,16 +10,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 py-16">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-12 h-12 gradient-gold rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-xl">ACS</span>
-              </div>
-              <div>
-                <div className="text-white font-bold text-lg">ACS Contabilidade</div>
-                <div className="text-sm text-primary-foreground/80 -mt-1">
-                  Contabilidade & Gestão Empresarial
-                </div>
-              </div>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/18881e3a-b23a-435f-8a76-df6731879bfe.png"
+                alt="ACS Contabilidade & Gestão Empresarial"
+                className="h-16 w-auto object-contain"
+              />
             </div>
             
             <p className="text-primary-foreground/90 leading-relaxed mb-6 max-w-md">
