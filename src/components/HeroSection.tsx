@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import ceoPortrait from "@/assets/ceo-portrait.jpg";
+// Using uploaded CEO portrait
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,7 +58,7 @@ const HeroSection = () => {
               {/* CEO Portrait */}
               <div className="relative">
                 <img
-                  src={ceoPortrait}
+                  src="/lovable-uploads/bd02df87-abf8-48d4-bf6b-ef07688d2924.png"
                   alt="Andersom Carvalho, CEO da ACS Contabilidade"
                   className="w-full max-w-lg mx-auto rounded-3xl shadow-elegant scale-on-hover"
                 />
