@@ -1,10 +1,19 @@
 import { useState, useEffect } from "react";
+import { Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Instagram } from "lucide-react";
+
+// Extend window type for Instagram embed
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: {
+        process: () => void;
+      };
+    };
+  }
+}
 
 const ContentSection = () => {
-  const [currentReel, setCurrentReel] = useState(0);
-
   // Instagram reels data with embed codes
   const reels = [
     {
@@ -34,34 +43,25 @@ const ContentSection = () => {
     }
   ];
 
-  const nextReel = () => {
-    setCurrentReel((prev) => (prev + 1) % reels.length);
-  };
-
-  const prevReel = () => {
-    setCurrentReel((prev) => (prev - 1 + reels.length) % reels.length);
-  };
-
   useEffect(() => {
-    const timer = setInterval(nextReel, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
-    // Load Instagram embed script
+    // Load Instagram embed script and process embeds
     const script = document.createElement('script');
-    script.src = "//www.instagram.com/embed.js";
+    script.src = '//www.instagram.com/embed.js';
     script.async = true;
     document.body.appendChild(script);
 
+    script.onload = () => {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    };
+
     return () => {
-      document.body.removeChild(script);
+      if (script.parentNode) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
-
-  const getCurrentReel = () => {
-    return reels[currentReel];
-  };
 
   return (
     <section className="py-20 bg-muted/30" id="content">
@@ -81,51 +81,41 @@ const ContentSection = () => {
           </p>
         </div>
 
-        {/* Featured Reel */}
-        <div className="relative max-w-lg mx-auto mb-12">
-          <div className="bg-white rounded-3xl shadow-elegant p-6">
-            <h3 className="text-xl font-bold text-primary mb-4 text-center">
-              {getCurrentReel().title}
-            </h3>
-            
-            <div 
-              className="instagram-embed-container"
-              dangerouslySetInnerHTML={{ __html: getCurrentReel().embedCode }}
-            />
-          </div>
-
-          {/* Navigation */}
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={prevReel}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-elegant border-primary/20 hover:border-primary/40"
-          >
-            <ChevronLeft className="w-6 h-6 text-primary" />
-          </Button>
-
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={nextReel}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-elegant border-primary/20 hover:border-primary/40"
-          >
-            <ChevronRight className="w-6 h-6 text-primary" />
-          </Button>
-        </div>
-
-        {/* Dots Indicator */}
-        <div className="flex justify-center mb-12 space-x-2">
-          {reels.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentReel(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentReel 
-                  ? 'bg-gold scale-125' 
-                  : 'bg-primary/30 hover:bg-primary/50'
-              }`}
-            />
+        {/* Instagram Videos Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {reels.map((reel, index) => (
+            <div key={reel.id} className="bg-white rounded-2xl shadow-soft overflow-hidden hover:shadow-elegant transition-all duration-300 group">
+              <div className="relative">
+                <div 
+                  className="instagram-embed aspect-square overflow-hidden"
+                  dangerouslySetInnerHTML={{ __html: reel.embedCode }}
+                />
+                <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-2 rounded-full opacity-90">
+                  <Instagram className="w-4 h-4" />
+                </div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-75 group-hover:scale-100">
+                    <svg className="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-primary mb-3 line-clamp-3 leading-tight text-sm">
+                  {reel.title}
+                </h3>
+                <div className="flex items-center justify-between">
+                  <p className="text-sm text-gold hover:text-gold-dark transition-colors cursor-pointer font-medium">
+                    Ver no Instagram →
+                  </p>
+                  <div className="flex items-center space-x-1 text-xs text-muted-foreground">
+                    <Instagram className="w-3 h-3" />
+                    <span>Reel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 

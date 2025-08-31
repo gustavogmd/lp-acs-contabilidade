@@ -34,12 +34,16 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/18881e3a-b23a-435f-8a76-df6731879bfe.png"
+              src="/lovable-uploads/a9c8ab23-7481-485d-a012-0e16b5a637e5.png"
               alt="ACS Contabilidade & Gestão Empresarial"
               className="h-12 w-auto object-contain"
             />
+            <div className="hidden md:block">
+              <div className="text-white font-bold text-lg">ACS</div>
+              <div className="text-white/90 text-sm">Contabilidade e Gestão Empresarial</div>
+            </div>
           </div>
 
           {/* Desktop Menu */}

@@ -250,4 +250,25 @@ All colors MUST be HSL for consistency */
       transform: translateY(-10px); 
     }
   }
+
+  /* Instagram embed specific styles */
+  .instagram-embed blockquote {
+    margin: 0 !important;
+    max-width: 100% !important;
+    min-width: auto !important;
+    width: 100% !important;
+  }
+
+  .instagram-embed iframe {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }

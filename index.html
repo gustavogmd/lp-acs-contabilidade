@@ -17,8 +17,14 @@
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
   </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+  <script>
+    if (typeof window !== 'undefined' && typeof window.instgrm !== 'undefined') {
+      window.instgrm.Embeds.process();
+    }
+  </script>
+  <script async src="//www.instagram.com/embed.js"></script>
+</body>
 </html>
