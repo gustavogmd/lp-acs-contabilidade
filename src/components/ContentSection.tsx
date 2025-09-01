@@ -84,20 +84,51 @@ const ContentSection = () => {
         {/* Instagram Videos Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {reels.map((reel, index) => (
-            <div key={reel.id} className="bg-white rounded-2xl shadow-soft overflow-hidden hover:shadow-elegant transition-all duration-300 group">
-              <div className="relative">
-                <div 
-                  className="instagram-embed aspect-square overflow-hidden"
-                  dangerouslySetInnerHTML={{ __html: reel.embedCode }}
-                />
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-2 rounded-full opacity-90">
-                  <Instagram className="w-4 h-4" />
-                </div>
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-75 group-hover:scale-100">
-                    <svg className="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
+            <div 
+              key={reel.id} 
+              className="bg-white rounded-2xl shadow-soft overflow-hidden hover:shadow-elegant transition-all duration-300 group cursor-pointer"
+              onClick={() => {
+                const url = reel.embedCode.match(/href="([^"]*)"/)![1];
+                window.open(url, '_blank');
+              }}
+            >
+              <div className="aspect-[9/16] bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                {/* Simulated video thumbnail */}
+                <div className="absolute inset-0 flex flex-col justify-between p-4">
+                  <div className="flex justify-between items-start">
+                    <div className="w-8 h-8 bg-white/20 rounded-full backdrop-blur-sm flex items-center justify-center">
+                      <Instagram className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="bg-black/50 px-2 py-1 rounded text-white text-xs font-medium">
+                      {Math.floor(Math.random() * 3 + 1)}:0{Math.floor(Math.random() * 60)}
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
+                      <svg className="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <div className="text-white text-xs font-medium bg-black/50 px-3 py-1 rounded-full backdrop-blur-sm">
+                      @acs_contabilidade_e_gestao
+                    </div>
+                  </div>
+                  
+                  <div className="flex justify-center space-x-4">
+                    <div className="flex items-center space-x-1 text-white">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                      </svg>
+                      <span className="text-xs">{Math.floor(Math.random() * 500 + 100)}</span>
+                    </div>
+                    <div className="flex items-center space-x-1 text-white">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                      <span className="text-xs">{Math.floor(Math.random() * 50 + 10)}</span>
+                    </div>
                   </div>
                 </div>
               </div>
