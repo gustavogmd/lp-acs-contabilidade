@@ -9,57 +9,39 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Maria Silva",
-      company: "Indústria Silva & Cia",
-      role: "Diretora Financeira",
-      content: "A ACS transformou completamente nossa gestão financeira. Com o planejamento tributário que eles desenvolveram, conseguimos reduzir 30% dos nossos custos tributários e investir mais no crescimento da empresa.",
+      name: "Save Tecnologia Ltda",
+      company: "Save Tecnologia Ltda",
+      role: "",
+      content: "Empresa estava com situação lastimável. Contador anterior deixou impostos pendentes e sem baixa. A ACS Contabilidade resolveu tudo: baixou empresa antiga, regularizou nova e mudança de endereço. Durmo tranquila agora!",
       rating: 5,
-      photo: "MS"
+      photo: "ST"
     },
     {
       id: 2,
-      name: "João Santos",
-      company: "TechStart Solutions",
-      role: "CEO",
-      content: "Desde que contratamos a ACS, nossa empresa cresceu 150%. A consultoria estratégica deles foi fundamental para identificarmos oportunidades de mercado que nem sabíamos que existiam.",
+      name: "Karine Santos",
+      company: "Karine Santos",
+      role: "",
+      content: "Venho aqui expressar minha satisfação e alegria em ter essa equipe tão dedicada e profissional caminhando ao meu lado. Sempre muito solícitos e corretos. Um apoio especial e uma parceria ímpar. Muito obrigada pelo serviço de excelência!",
       rating: 5,
-      photo: "JS"
+      photo: "KS"
     },
     {
       id: 3,
-      name: "Ana Rodrigues",
-      company: "Comércio Rodrigues",
-      role: "Proprietária",
-      content: "O atendimento personalizado da ACS fez toda a diferença. Eles conhecem nossa empresa como ninguém e sempre estão disponíveis quando precisamos. Recomendo para qualquer empresário.",
+      name: "Paula Cristine Pimentel",
+      company: "Paula Cristine Pimentel",
+      role: "",
+      content: "Minha experiência com o escritório tem sido excelente. Sempre recebo um atendimento ágil, atencioso e com total segurança nas informações. Recomendo muito!",
       rating: 5,
-      photo: "AR"
+      photo: "PP"
     },
     {
       id: 4,
-      name: "Carlos Oliveira",
-      company: "Construções Oliveira",
-      role: "Sócio-Diretor",
-      content: "A ACS não é apenas nossa contabilidade, são nossos parceiros estratégicos. Graças às análises gerenciais deles, conseguimos otimizar nossos projetos e aumentar significativamente nossa margem de lucro.",
+      name: "PivotaAI",
+      company: "PivotaAI",
+      role: "",
+      content: "A minha experiência com a ACS Contabilidade foi excelente, estava com problemas com dívidas no meu CNPJ e eles me ajudaram a resolver super rápido, e me ajudaram a planejar com mais eficiência as estratégias tributárias da minha empresa. super recomendo.",
       rating: 5,
-      photo: "CO"
-    },
-    {
-      id: 5,
-      name: "Fernanda Costa",
-      company: "Beauty Center",
-      role: "Fundadora",
-      content: "Trabalho com a ACS há 5 anos e só tenho elogios. A transparência, a agilidade e principalmente a capacidade de transformar números em estratégias práticas são impressionantes.",
-      rating: 5,
-      photo: "FC"
-    },
-    {
-      id: 6,
-      name: "Roberto Lima",
-      company: "Lima Transportes",
-      role: "Diretor Geral",
-      content: "A modernização que a ACS trouxe para nossa gestão foi incrível. Automatizaram nossos processos e agora temos relatórios em tempo real que nos ajudam a tomar decisões mais rápidas e precisas.",
-      rating: 5,
-      photo: "RL"
+      photo: "PA"
     }
   ];
 
@@ -128,9 +110,11 @@ const TestimonialsSection = () => {
                           <div className="font-semibold text-primary text-lg">
                             {testimonial.name}
                           </div>
-                          <div className="text-gold font-medium">
-                            {testimonial.role}
-                          </div>
+                          {testimonial.role && (
+                            <div className="text-gold font-medium">
+                              {testimonial.role}
+                            </div>
+                          )}
                           <div className="text-sm text-muted-foreground">
                             {testimonial.company}
                           </div>
@@ -182,7 +166,7 @@ const TestimonialsSection = () => {
         <div className="mt-20 bg-primary rounded-3xl p-8 md:p-12 text-white">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">98%</div>
+              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">100%</div>
               <div className="text-xl font-semibold mb-1">Taxa de Satisfação</div>
               <div className="text-primary-foreground/80">dos nossos clientes</div>
             </div>

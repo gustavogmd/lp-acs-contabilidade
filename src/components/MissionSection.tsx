@@ -132,16 +132,14 @@ const MissionSection = () => {
 
             <div className="relative">
               <div className="absolute -inset-4 gradient-gold rounded-3xl opacity-20 blur-xl"></div>
-              <div className="relative bg-gradient-to-br from-primary to-primary-dark p-8 rounded-3xl text-white">
+              <div className="relative bg-gradient-to-br from-primary to-primary-dark p-8 rounded-3xl text-white transform -translate-y-8">
                 <div className="text-6xl font-bold mb-4 opacity-20">"</div>
                 <blockquote className="text-xl font-medium leading-relaxed -mt-12 pl-8">
-                  Nossa paixão é ver nossos clientes crescerem e alcançarem seus sonhos. 
-                  Cada número, cada análise, cada consultoria tem um propósito: 
-                  transformar seu negócio em uma história de sucesso.
+                  A contabilidade não é apenas números: é estratégia para crescer.
                 </blockquote>
                 <div className="mt-6 pt-6 border-t border-white/20">
-                  <div className="font-semibold">Equipe ACS</div>
-                  <div className="text-sm opacity-80">Contabilidade & Gestão Empresarial</div>
+                  <div className="font-semibold">Anderson Carvalho, CEO</div>
+                  <div className="text-sm opacity-80">ACS Contabilidade</div>
                 </div>
               </div>
             </div>

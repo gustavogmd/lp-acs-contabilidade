@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-white">
+    <footer className="text-white" style={{ backgroundColor: 'black' }}>
       <div className="container mx-auto px-4">
         {/* Main Footer */}
         <div className="grid md:grid-cols-4 gap-8 py-16">
@@ -154,6 +154,21 @@ const Footer = () => {
                 Termos de Uso
               </a>
             </div>
+          </div>
+          
+          {/* PivotaAI Credit */}
+          <div className="border-t border-white/20 pt-4 mt-4 text-center">
+            <p className="text-primary-foreground/60 text-sm">
+              Feito por{" "}
+              <a 
+                href="https://www.pivotaai.com.br" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:text-gold-light transition-colors font-semibold"
+              >
+                PivotaAI
+              </a>
+            </p>
           </div>
         </div>
       </div>

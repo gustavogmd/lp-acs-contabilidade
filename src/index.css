@@ -24,6 +24,11 @@ All colors MUST be HSL for consistency */
     --primary-light: 220 70% 35%;
     --primary-dark: 220 90% 15%;
 
+    /* Black Colors for Header/Footer */
+    --black: 0 0% 0%;
+    --black-light: 0 0% 10%;
+    --black-foreground: 0 0% 100%;
+
     /* Sophisticated Gold - Secondary Brand Color */
     --secondary: 45 95% 55%;
     --secondary-foreground: 222 84% 5%;

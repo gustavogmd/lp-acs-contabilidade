@@ -27,9 +27,12 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-primary/90 shadow-elegant backdrop-blur-lg' 
-          : 'bg-primary/70 backdrop-blur-sm'
+          ? 'bg-black/90 shadow-elegant backdrop-blur-lg' 
+          : 'bg-black/70 backdrop-blur-sm'
       }`}
+      style={{
+        backgroundColor: isScrolled ? 'rgba(0, 0, 0, 0.9)' : 'rgba(0, 0, 0, 0.7)'
+      }}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -81,7 +84,10 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-primary/95 backdrop-blur-lg border-t border-white/20">
+          <div 
+            className="md:hidden absolute top-full left-0 right-0 backdrop-blur-lg border-t border-white/20"
+            style={{ backgroundColor: 'rgba(0, 0, 0, 0.95)' }}
+          >
             <nav className="flex flex-col space-y-4 p-6">
               {menuItems.map((item) => (
                 <a
