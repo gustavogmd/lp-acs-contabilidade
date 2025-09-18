@@ -120,10 +120,11 @@ const ContentSection = () => {
             <Button 
               variant="cta"
               onClick={() => window.open('https://www.instagram.com/acs_contabilidade_e_gestao', '_blank')}
-              className="shadow-gold hover:shadow-elegant"
+              className="shadow-gold hover:shadow-elegant text-center whitespace-normal h-auto py-3 px-4"
             >
-              <Instagram className="w-6 h-6 mr-2" />
-              Seguir @acs_contabilidade_e_gestao
+              <Instagram className="w-6 h-6 mr-2 flex-shrink-0" />
+              <span className="hidden sm:inline">Seguir @acs_contabilidade_e_gestao</span>
+              <span className="sm:hidden">Seguir no Instagram</span>
             </Button>
           </div>
         </div>
