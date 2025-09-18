@@ -48,7 +48,7 @@ const HeroSection = () => {
                 <div className="text-sm text-muted-foreground">Anos de experiência</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">98%</div>
+                <div className="text-3xl font-bold text-primary">100%</div>
                 <div className="text-sm text-muted-foreground">Satisfação dos clientes</div>
               </div>
             </div>

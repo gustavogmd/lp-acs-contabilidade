@@ -122,7 +122,7 @@ const DifferentialsSection = () => {
             
             <div className="group">
               <div className="text-4xl md:text-5xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
-                98%
+                100%
               </div>
               <div className="text-gold font-semibold text-lg mb-1">Satisfação</div>
               <div className="text-sm text-muted-foreground">dos nossos clientes</div>
