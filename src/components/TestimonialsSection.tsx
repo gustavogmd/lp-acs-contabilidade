@@ -139,7 +139,7 @@ const TestimonialsSection = () => {
             <div>
               <div className="text-4xl md:text-5xl font-bold text-gold mb-2">Exclusivo</div>
               <div className="text-xl font-semibold mb-1">Atendimento</div>
-              <div className="text-primary-foreground/80">Atendimento totalmente e</div>
+              <div className="text-primary-foreground/80">Atendimento totalmente exclusivo</div>
             </div>
           </div>
         </div>
