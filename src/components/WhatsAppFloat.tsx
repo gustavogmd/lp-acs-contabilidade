@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import whatsappLogo from "@/assets/logo-whatsapp.png";
 
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
@@ -6,13 +6,21 @@ const WhatsAppFloat = () => {
   };
 
   return (
-    <button
+    <div 
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse"
-      aria-label="Entrar em contato via WhatsApp"
+      className="fixed bottom-6 right-6 z-50 flex flex-col items-center cursor-pointer group"
     >
-      <MessageCircle className="w-6 h-6" />
-    </button>
+      <div className="bg-green-500 hover:bg-green-600 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse">
+        <img 
+          src={whatsappLogo} 
+          alt="WhatsApp" 
+          className="w-8 h-8"
+        />
+      </div>
+      <p className="text-xs font-medium text-center mt-2 bg-white px-2 py-1 rounded shadow-md max-w-[120px] leading-tight">
+        Clique aqui e Fale conosco
+      </p>
+    </div>
   );
 };
 

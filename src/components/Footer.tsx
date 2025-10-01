@@ -35,7 +35,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-gold" />
-                <span className="text-primary-foreground/90">Niterói, RJ, Brasil</span>
+                <span className="text-primary-foreground/90">São Gonçalo, RJ, Brasil</span>
               </div>
             </div>
           </div>
