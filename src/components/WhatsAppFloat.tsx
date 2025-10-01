@@ -10,11 +10,11 @@ const WhatsAppFloat = () => {
       onClick={handleWhatsAppClick}
       className="fixed bottom-6 right-6 z-50 flex flex-col items-center cursor-pointer group"
     >
-      <div className="bg-green-500 hover:bg-green-600 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse">
+      <div className="bg-green-500 hover:bg-green-600 p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:animate-[pulse_1s_ease-in-out_infinite]">
         <img 
           src={whatsappLogo} 
           alt="WhatsApp" 
-          className="w-8 h-8"
+          className="w-8 h-8 select-none"
         />
       </div>
       <p className="text-xs font-medium text-center mt-2 bg-white px-2 py-1 rounded shadow-md max-w-[120px] leading-tight">
